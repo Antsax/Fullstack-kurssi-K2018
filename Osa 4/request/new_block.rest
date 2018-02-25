@@ -1,0 +1,12 @@
+
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFhdGVsaW5lbjEyMyIsImlkIjoiNWE5MjkyYmMyYzdlZWMyOTlmNmExNjRjIiwiaWF0IjoxNTE5NTYxMjMwfQ.iR3OlBdAdTu2C4FPQFKZD8wBuvuw9XVR0DwlJmUS6_s
+
+{
+    "title": "pekka",
+    "author": "ville",
+    "url": "pekan.blogi.fi",
+    "likes": 0,
+    "userId": "5a927eac9d1a1b18054b7a8b"
+}
