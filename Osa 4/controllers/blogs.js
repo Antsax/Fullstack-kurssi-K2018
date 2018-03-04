@@ -76,24 +76,28 @@ blogsRouter.get('/', async (request, response) => {
   })
 
   blogsRouter.delete('/:id', async (req, res) => {
-    const blogId = req.params.id
-    const user = await User.findById(req.token.id)
-
     const token = req.token
     const decodedToken = jwt.verify(token, process.env.SECRET)
 
     if (!token || !decodedToken.id) {
       return res.status(401).json({ error: 'token missing or invalid' })
     }
+
+    const blogId = req.params.id
+    const user = await User.findById(decodedToken.id)
+
+    if (decodedToken.id === undefined) {
+      return res.status(401).json({error: 'token.id is undefined'})
+    }
   
     if (!isUsersBlog(user, blogId)) {
-      res.status(401).send({error: 'u can only rmv ur own blogs'})
+      res.status(401).send({ error: 'u can only rmv ur own blogs'})
     }
   
     try {
       await removeBlogFromUser(user, blogId)
       await Blog.findByIdAndRemove(blogId)
-      res.status(204).end()
+      res.status(204).send({ error: 'blog succesfully deleted'})
     } catch (exception) {
       res.status(400).send({error: 'malformatted id'})
     }

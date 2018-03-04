@@ -1,12 +1,12 @@
 
-POST http://localhost:3001/api/blogs
+POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFhdGVsaW5lbjEyMyIsImlkIjoiNWE5MjkyYmMyYzdlZWMyOTlmNmExNjRjIiwiaWF0IjoxNTE5NTYxMjMwfQ.iR3OlBdAdTu2C4FPQFKZD8wBuvuw9XVR0DwlJmUS6_s
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpdGVzdGluZW4iLCJpZCI6IjVhOTU3ZDUxOTFmYTY3MGI5YTg1YTFiYiIsImlhdCI6MTUxOTc0OTM4NH0.qixrS4ppamonFHpcmgGjncCTmJqwmATIR-R-IZByY1I
 
 {
-    "title": "pekka",
-    "author": "ville",
-    "url": "pekan.blogi.fi",
-    "likes": 0,
-    "userId": "5a927eac9d1a1b18054b7a8b"
+    "title": "testiblogiiiii",
+    "author": "testinen",
+    "url": "ei oleeeeeeeeeeee",
+    "likes": 10,
+    "userId": "5a957d5191fa670b9a85a1bb"
 }
